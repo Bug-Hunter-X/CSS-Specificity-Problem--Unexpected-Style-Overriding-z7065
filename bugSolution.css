@@ -1,0 +1,44 @@
+The solution involves either making the `.container` selector more specific or reordering the CSS rules to ensure the desired style is applied.
+
+**Solution 1: Increasing Specificity**
+
+We can add more specificity to `.container` to ensure it takes precedence.  For example, by adding an ID or another class:
+
+```css
+div {
+  background-color: lightblue;
+}
+
+#myContainer {
+  background-color: lightcoral;
+  width: 300px;
+  height: 200px;
+}
+
+div.container {
+  background-color: lightgreen;
+}
+
+```
+
+**Solution 2: Reordering CSS Rules**
+
+Alternatively, we can reorder the CSS rules to ensure that the most specific rule is applied last.  This also guarantees the expected outcome.
+
+```css
+div {
+  background-color: lightblue;
+}
+
+div.container {
+  background-color: lightgreen;
+}
+
+.container {
+  background-color: lightcoral;
+  width: 300px;
+  height: 200px;
+}
+```
+
+Both solutions resolve the specificity conflict. Choose the solution that best suits your overall CSS structure and maintainability.
