@@ -1,0 +1,20 @@
+The following CSS code snippet demonstrates an issue where the expected behavior does not occur due to incorrect selector specificity or unexpected cascading effects.  The `.container` class's `background-color` property is overridden by the less specific selector `div.container`.
+
+```css
+div {
+  background-color: lightblue;
+}
+
+.container {
+  background-color: lightcoral;
+}
+
+div.container {
+  background-color: lightgreen;
+}
+
+.container {
+  width: 300px;
+  height: 200px;
+}
+```
